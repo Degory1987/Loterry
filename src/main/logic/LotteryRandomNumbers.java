@@ -1,11 +1,9 @@
 package main.logic;
 
 import main.messageprovider.MessageProvider;
-
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
-
 import static main.config.LoteryGameConfig.HOW_MANY_NUMBERS;
 
 public class LotteryRandomNumbers {

@@ -2,11 +2,9 @@ package main.logic;
 
 import main.messageprovider.MessageProvider;
 
-import javax.swing.*;
-import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
+
 
 public class NumbersHitCalculator {
 
