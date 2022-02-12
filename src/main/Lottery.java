@@ -4,9 +4,7 @@ import main.input.UserNumbersProvider;
 import main.logic.LotteryRandomNumbers;
 import main.logic.NumbersHitCalculator;
 import main.messageprovider.MessageProvider;
-
 import java.util.*;
-
 import static main.config.LoteryGameConfig.HOW_MANY_NUMBERS;
 
 public class Lottery {
@@ -25,13 +23,10 @@ public class Lottery {
         userNumbersProvider.displayGivenNumber(givenNumbers);
         lotteryRandomNumbers.setRandomNumbers();
         numbersHitCalculator.listCompare(givenNumbers,randomNumbers);
-
     }
 
     private static void GameStartInfo() {
         System.out.println(MessageProvider.GAME_START + MessageProvider.RULES_OF_GAME);
         System.out.println("______________________________________________");
     }
-
-
 }

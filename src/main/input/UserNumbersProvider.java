@@ -33,6 +33,4 @@ public class UserNumbersProvider {
             System.out.print(number + " ");
         }
     }
-
-
 }

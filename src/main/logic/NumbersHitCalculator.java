@@ -5,9 +5,7 @@ import main.messageprovider.MessageProvider;
 import java.util.LinkedList;
 import java.util.List;
 
-
 public class NumbersHitCalculator {
-
 
     public void listCompare(List<Integer> userGivenNumbers, List<Integer> randomNumbers) {
         List<Integer> hitNumbers = new LinkedList<>();
