@@ -3,19 +3,19 @@ package main.input;
 import main.messageprovider.MessageProvider;
 import java.util.*;
 
+import static main.config.LoteryGameConfig.HOW_MANY_NUMBERS;
+
 public class UserNumbersProvider {
 
-    public void getUserNumbers(int HOW_MANY_NUMBERS, List<Integer> givenNumbers) {
+    public void getUserNumbers(Set<Integer> givenNumbers) {
         System.out.println(MessageProvider.USER_INPUT_NUMBER);
         Scanner scanner = new Scanner(System.in);
-        for (int i = 0; i < HOW_MANY_NUMBERS; i++) {
+        while (areTheAllNumbers(givenNumbers)) {
             int userNumber = scanner.nextInt();
             if (!isInRange(userNumber)) {
                 System.out.println(MessageProvider.WRONG_NUMBER);
-                i--;
             } else if (givenNumbers.contains(userNumber)) {
                 System.out.println(MessageProvider.NUMBER_EXISTS);
-                i--;
             } else {
                 givenNumbers.add(userNumber);
             }
@@ -27,7 +27,11 @@ public class UserNumbersProvider {
         return number > 0 && number < 99;
     }
 
-    public void displayGivenNumber(List<Integer> givenNumbers) {
+    public boolean areTheAllNumbers(Set<Integer> numbers) {
+        return numbers.size() < HOW_MANY_NUMBERS;
+    }
+
+    public void displayGivenNumber(Set<Integer> givenNumbers) {
         System.out.println(MessageProvider.CHOSEN_NUMBERS);
         for (Integer number : givenNumbers) {
             System.out.print(number + " ");

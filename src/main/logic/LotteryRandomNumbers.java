@@ -1,16 +1,13 @@
 package main.logic;
 
 import main.messageprovider.MessageProvider;
-import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
 import static main.config.LoteryGameConfig.HOW_MANY_NUMBERS;
 
 public class LotteryRandomNumbers {
 
-    Set<Integer> randomNumbers = new HashSet<>();
-
-    public void setRandomNumbers() {
+    public void setRandomNumbers(Set<Integer> randomNumbers) {
         for (int i = 0; i < HOW_MANY_NUMBERS; i++) {
             Random random = new Random();
             randomNumbers.add(random.nextInt(100));

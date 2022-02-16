@@ -2,13 +2,13 @@ package main.logic;
 
 import main.messageprovider.MessageProvider;
 
-import java.util.LinkedList;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 
 public class NumbersHitCalculator {
 
-    public void listCompare(List<Integer> userGivenNumbers, List<Integer> randomNumbers) {
-        List<Integer> hitNumbers = new LinkedList<>();
+    public void listCompare(Set<Integer> userGivenNumbers, Set<Integer> randomNumbers) {
+        Set<Integer> hitNumbers = new HashSet<>();
         for (Integer userGivenNumber : userGivenNumbers) {
             for (Integer randomNumber : randomNumbers) {
                 if (userGivenNumber.equals(randomNumber)) {

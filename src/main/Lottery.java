@@ -11,17 +11,17 @@ public class Lottery {
 
     public static void main(String[] args) {
 
-        List<Integer> givenNumbers = new LinkedList<>();
-        List<Integer> randomNumbers = new LinkedList<>();
+        Set<Integer> givenNumbers = new HashSet<>();
+        Set<Integer> randomNumbers = new HashSet<>();
 
         UserNumbersProvider userNumbersProvider = new UserNumbersProvider();
         LotteryRandomNumbers lotteryRandomNumbers = new LotteryRandomNumbers();
         NumbersHitCalculator numbersHitCalculator = new NumbersHitCalculator();
 
         GameStartInfo();
-        userNumbersProvider.getUserNumbers(HOW_MANY_NUMBERS, givenNumbers);
+        userNumbersProvider.getUserNumbers(givenNumbers);
         userNumbersProvider.displayGivenNumber(givenNumbers);
-        lotteryRandomNumbers.setRandomNumbers();
+        lotteryRandomNumbers.setRandomNumbers(randomNumbers);
         numbersHitCalculator.listCompare(givenNumbers,randomNumbers);
     }
 
