@@ -1,7 +1,6 @@
 package main.logic;
 
 import main.messageprovider.MessageProvider;
-
 import java.util.HashSet;
 import java.util.Set;
 

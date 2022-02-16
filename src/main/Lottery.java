@@ -5,7 +5,6 @@ import main.logic.LotteryRandomNumbers;
 import main.logic.NumbersHitCalculator;
 import main.messageprovider.MessageProvider;
 import java.util.*;
-import static main.config.LoteryGameConfig.HOW_MANY_NUMBERS;
 
 public class Lottery {
 
